@@ -1,15 +1,11 @@
-import { ReactElement } from "react";
-import {StyledCard} from "./Styles";
+import { ReactElement } from 'react';
+import { StyledCard } from './Styles';
 
 interface CardProps {
-    children?: ReactElement | ReactElement[],
-    padding?: boolean
+	children?: ReactElement | ReactElement[];
+	padding?: boolean;
 }
 
 export const Card = ({ children }: CardProps) => {
-    return (
-        <StyledCard padding>
-            {children}
-        </StyledCard>
-    )
+	return <StyledCard padding>{children}</StyledCard>;
 };

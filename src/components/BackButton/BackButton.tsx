@@ -1,21 +1,21 @@
-import { useHistory } from "react-router-dom";
-import {StyledBackButton} from "./Styles";
+import { useHistory } from 'react-router-dom';
+import { StyledBackButton } from './Styles';
 
 interface BackButtonProps {
-    text: string;
+	text: string;
 }
 
-export const BackButton = ({text}: BackButtonProps) => {
-    const history = useHistory();
+export const BackButton = ({ text }: BackButtonProps) => {
+	const history = useHistory();
 
-    const handleGoBack = () => {
-        history.goBack();
-    }
+	const handleGoBack = () => {
+		history.goBack();
+	};
 
-    return (
-        <StyledBackButton onClick={handleGoBack}>
-            <img alt="go back" src="/icons/back.svg" />
-            <strong>{text}</strong>
-        </StyledBackButton>
-    )
+	return (
+		<StyledBackButton onClick={handleGoBack}>
+			<img alt="go back" src="/icons/back.svg" />
+			<strong>{text}</strong>
+		</StyledBackButton>
+	);
 };

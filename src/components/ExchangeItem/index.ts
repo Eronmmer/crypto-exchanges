@@ -1,1 +1,1 @@
-export { ExchangeItem } from "./ExchangeItem";
+export { ExchangeItem } from './ExchangeItem';

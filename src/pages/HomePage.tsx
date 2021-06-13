@@ -1,9 +1,7 @@
-import {ExchangeList} from "../components/ExchangeList";
+import { ExchangeList } from '../components/ExchangeList';
 
 const HomePage = () => {
-    return (
-        <ExchangeList />
-    )
-}
+	return <ExchangeList />;
+};
 
 export default HomePage;

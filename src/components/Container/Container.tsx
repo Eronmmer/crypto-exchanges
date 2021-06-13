@@ -1,14 +1,10 @@
-import { ReactElement } from "react";
-import {StyledContainer} from "./Styles";
+import { ReactElement } from 'react';
+import { StyledContainer } from './Styles';
 
 interface ContainerProps {
-    children?: ReactElement | ReactElement[]
+	children?: ReactElement | ReactElement[];
 }
 
 export const Container = ({ children }: ContainerProps) => {
-    return (
-        <StyledContainer>
-            {children}
-        </StyledContainer>
-    )
-}
+	return <StyledContainer>{children}</StyledContainer>;
+};

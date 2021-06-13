@@ -1,1 +1,1 @@
-export { ExchangeList } from "./ExchangeList";
+export { ExchangeList } from './ExchangeList';

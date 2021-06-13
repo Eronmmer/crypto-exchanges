@@ -1,9 +1,9 @@
-import { StyledLoader } from "./Styles";
+import { StyledLoader } from './Styles';
 
 export const Loader = () => {
-  return (
-    <StyledLoader>
-      <img alt="" src="/images/loading.svg" />
-    </StyledLoader>
-  )
+	return (
+		<StyledLoader>
+			<img alt="" src="/images/loading.svg" />
+		</StyledLoader>
+	);
 };

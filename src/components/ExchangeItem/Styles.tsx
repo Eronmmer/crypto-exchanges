@@ -1,68 +1,68 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const StyledItem = styled(Link)`
-  padding: 1rem .5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: initial;
-  font-size: 0.9rem;
-  
-  &:last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  & > * {
-    flex-basis: 33%;
-    text-align: left;
+	padding: 1rem 0.5rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: initial;
+	font-size: 0.9rem;
 
-    &:last-child {
-      text-align: center;
-    }
+	&:last-child {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
 
-    @media(min-width: 768px) {
-      font-size: 1rem;
+	& > * {
+		flex-basis: 33%;
+		text-align: left;
 
-      &:not(:first-child) {
-        text-align: center;
-      }
-    }
-  }
+		&:last-child {
+			text-align: center;
+		}
 
-  @media(min-width: 768px) {
-    font-size: 1.2rem;
+		@media (min-width: 768px) {
+			font-size: 1rem;
 
-    img {
-      width: 30px;
-      display: block;
-    }
-  }
-  
-  &:hover {
-    background-color:  #f4f5f7;
-  }
+			&:not(:first-child) {
+				text-align: center;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		font-size: 1.2rem;
+
+		img {
+			width: 30px;
+			display: block;
+		}
+	}
+
+	&:hover {
+		background-color: #f4f5f7;
+	}
 `;
 
 export const StyledName = styled.div`
-  display: flex;
-  gap: .5rem;
+	display: flex;
+	gap: 0.5rem;
 
-  img {
-    display: none;
-  }
+	img {
+		display: none;
+	}
 
-  span {
-    font-weight: 500;
-  }
+	span {
+		font-weight: 500;
+	}
 
-  @media(min-width: 768px) {
-    font-size: 1.2rem;
-    
-    img {
-      width: 30px;
-      display: block;
-    }
-  }
+	@media (min-width: 768px) {
+		font-size: 1.2rem;
+
+		img {
+			width: 30px;
+			display: block;
+		}
+	}
 `;
