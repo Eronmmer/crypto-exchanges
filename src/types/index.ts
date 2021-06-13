@@ -1,5 +1,5 @@
 export type Exchange = {
-	id?: string;
+	id: string;
 	name: string;
 	year_established: number;
 	trust_score: number;

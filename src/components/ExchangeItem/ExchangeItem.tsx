@@ -1,14 +1,7 @@
 import { StyledItem, StyledName } from './Styles';
+import { Exchange } from '../../types';
 
-interface ExchangeItemProps {
-	id: string;
-	country: string;
-	name: string;
-	trust_score_rank: number;
-	image: string;
-}
-
-export const ExchangeItem = ({ id, country, name, trust_score_rank, image }: ExchangeItemProps) => {
+export const ExchangeItem = ({ id, country, name, trust_score_rank, image }: Exchange) => {
 	return (
 		<StyledItem to={`/${id}`}>
 			<StyledName>
