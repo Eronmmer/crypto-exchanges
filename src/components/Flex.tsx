@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import React from "react";
+import React, { ReactElement } from "react";
 
-const Flex: React.FC<{children: any}> = ({children}) => {
+const Flex: React.FC<{ children: ReactElement | ReactElement[] }> = ({ children }) => {
     return (
         <StyledContainer>
             {children}

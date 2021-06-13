@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 
 interface CardProps {
-    children?: ReactElement,
+    children?: ReactElement | ReactElement[],
     padding?: boolean
 }
 
