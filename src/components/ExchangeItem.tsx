@@ -15,7 +15,7 @@ const ExchangeItem: React.FC<Exchange> = ({
     <StyledItem to={`/${id}`}>
       <StyledName>
         <img src={image} alt="" />
-        <a href={url}>{name}</a>
+        <span >{name}</span>
       </StyledName>
       <p>{country}</p>
       <p>{trust_score_rank}</p>
@@ -75,12 +75,8 @@ const StyledName = styled.div`
     display: none;
   }
 
-  a {
+  span {
     font-weight: 500;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   @media(min-width: 768px) {
