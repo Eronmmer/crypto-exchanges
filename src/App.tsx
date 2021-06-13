@@ -1,8 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage";
 import ExchangePage from "./pages/ExchangePage";
-import Navbar from "./components/NavBar";
+import { Navbar } from "./components/NavBar";
 
 function App() {
   return (

@@ -1,29 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Exchange } from "../types";
+import { Link } from "react-router-dom";
 
-const ExchangeItem: React.FC<Exchange> = ({
-  id,
-  country,
-  name,
-  url,
-  trust_score_rank,
-  image
-}) => {
-  return (
-    <StyledItem to={`/${id}`}>
-      <StyledName>
-        <img src={image} alt="" />
-        <span >{name}</span>
-      </StyledName>
-      <p>{country}</p>
-      <p>{trust_score_rank}</p>
-    </StyledItem>
-  )
-}
-
-const StyledItem = styled(Link)`
+export const StyledItem = styled(Link)`
   padding: 1rem .5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
@@ -67,7 +45,7 @@ const StyledItem = styled(Link)`
   }
 `;
 
-const StyledName = styled.div`
+export const StyledName = styled.div`
   display: flex;
   gap: .5rem;
 
@@ -87,6 +65,4 @@ const StyledName = styled.div`
       display: block;
     }
   }
-`
-
-export default ExchangeItem;
+`;

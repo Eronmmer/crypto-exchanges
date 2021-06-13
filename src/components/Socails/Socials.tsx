@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import React from "react";
+import { StyledIcon, StyledSocials } from "./Styles";
 
 interface SocialsProps {
   twitter?: string;
@@ -9,7 +8,7 @@ interface SocialsProps {
   slack?: string;
 }
 
-const Socials: React.FC<SocialsProps> = ({ twitter, facebook, reddit, telegram, slack }) => {
+export const Socials = ({ twitter, facebook, reddit, telegram, slack }: SocialsProps) => {
   return (
     <StyledSocials>
       {twitter &&
@@ -40,16 +39,3 @@ const Socials: React.FC<SocialsProps> = ({ twitter, facebook, reddit, telegram, 
     </StyledSocials>
   )
 };
-
-const StyledSocials = styled.div`
-  margin-top: 1.5rem;
-  display: flex;
-  gap: .5rem;
-  align-items: center;
-`;
-
-const StyledIcon = styled.img`
-  width: 30px;
-`
-
-export default Socials;

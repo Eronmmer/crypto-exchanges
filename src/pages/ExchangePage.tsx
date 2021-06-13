@@ -1,14 +1,14 @@
-import React, {useEffect, useState, Fragment} from "react";
+import {useEffect, useState, Fragment} from "react";
 import {useParams} from "react-router-dom";
-import Container from "../components/Container";
-import BackButton from "../components/BackButton";
-import Card from "../components/Card";
+import {Container} from "../components/Container";
+import {BackButton} from "../components/BackButton";
+import {Card} from "../components/Card";
 import {endpoint} from "../utils";
 import {ExchangeData} from "../types";
-import Loader from "../components/Loader";
+import {Loader} from "../components/Loader";
 import styled from "styled-components";
-import Flex from "../components/Flex";
-import Socials from "../components/Socials";
+import {Flex} from "../components/Flex";
+import {Socials} from "../components/Socails/Socials";
 
 const ExchangePage = () => {
     const {id} = useParams<{id: string}>();

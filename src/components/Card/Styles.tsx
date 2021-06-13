@@ -1,20 +1,6 @@
-import React, { ReactElement } from "react";
 import styled from "styled-components";
 
-interface CardProps {
-    children?: ReactElement | ReactElement[],
-    padding?: boolean
-}
-
-const Card: React.FC<CardProps> = ({ children }) => {
-    return (
-        <StyledCard padding>
-            {children}
-        </StyledCard>
-    )
-};
-
-const StyledCard = styled.div<{ readonly padding?: boolean; }>`
+export const StyledCard = styled.div<{ readonly padding?: boolean; }>`
   background-color: white;
   margin: 2.5rem 0;
   border: 1px solid #efefef;
@@ -28,6 +14,4 @@ const StyledCard = styled.div<{ readonly padding?: boolean; }>`
   @media(min-width: 768px) {
     padding: ${props => props.padding ? "1rem 2rem" : "1rem 0"};
   }
-`
-
-export default Card;
+`;
