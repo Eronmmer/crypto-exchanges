@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledPaginationArrow } from './Styles';
 
 export interface ArrowProps {
@@ -6,6 +5,6 @@ export interface ArrowProps {
 	previous?: boolean;
 }
 
-export const PaginationArrow: React.FC<ArrowProps> = ({ inValid, previous }) => {
+export const PaginationArrow = ({ inValid, previous }: ArrowProps) => {
 	return <StyledPaginationArrow inValid={inValid} previous={previous} />;
 };

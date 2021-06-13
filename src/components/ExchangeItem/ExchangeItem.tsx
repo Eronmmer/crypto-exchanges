@@ -1,14 +1,14 @@
-import React from 'react';
 import { StyledItem, StyledName } from './Styles';
-import { Exchange } from '../../types';
 
-export const ExchangeItem: React.FC<Exchange> = ({
-	id,
-	country,
-	name,
-	trust_score_rank,
-	image,
-}) => {
+interface ExchangeItemProps {
+	id: string;
+	country: string;
+	name: string;
+	trust_score_rank: number;
+	image: string;
+}
+
+export const ExchangeItem = ({ id, country, name, trust_score_rank, image }: ExchangeItemProps) => {
 	return (
 		<StyledItem to={`/${id}`}>
 			<StyledName>
