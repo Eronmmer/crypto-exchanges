@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 import { showPaginationNumber } from "../utils";
 
@@ -50,7 +50,6 @@ display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: 1rem;
-  margin-right: 2rem;
 
   & > div {
     display: flex;
@@ -70,8 +69,9 @@ display: flex;
     border-radius: 0.25rem;
     cursor: pointer;
     transition: 0.3s ease-out;
-    padding: 0.3rem 0.6rem;
+    padding: 5px;
     margin: 0 0.1rem;
+    font-size: .8rem;
 
     &:hover {
       background-color: #cbd5f1;
@@ -84,6 +84,15 @@ display: flex;
       width: 0.3rem;
       background-color: #B7BCC2;
     }
+
+    @media(min-width: 768px) {
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+
+  @media(min-width: 768px) {
+    margin-right: 2rem;
   }
 `;
 
@@ -94,7 +103,7 @@ interface PaginationControlProps {
 }
 
 const PaginationControl = styled.div<PaginationControlProps>`
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   border-radius: 0.25rem;
@@ -119,6 +128,10 @@ const PaginationControl = styled.div<PaginationControlProps>`
   }
 
   border: 1px solid #DBDCE0;
+
+  @media(min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export default Pagination;

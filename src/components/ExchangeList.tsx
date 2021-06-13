@@ -44,8 +44,6 @@ const ExchangeList = () => {
                                 <StyledHead>
                                     <p>Name</p>
                                     <p>Country</p>
-                                    <p>Year Established</p>
-                                    <p>Trust Score</p>
                                     <p>Trust Score Rank</p>
                                 </StyledHead>
                                 <div>
@@ -92,16 +90,23 @@ const StyledHead = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  font-size: .9rem;
+  padding: 0 .5rem;
   
   p {
     font-weight: 500;
-    font-size: 1.2rem;
-    flex-basis: 33%;
-    text-align: left;
-    
-    &:not(:first-child) {
-      text-align: center;
+    flex-basis: 30%;
+
+    &:last-child {
+        flex-basis: 39%;
+    }
+
+    @media(min-width: 768px) {
+        font-size: 1.2rem;
+
+        &:not(:first-child) {
+            text-align: center;
+        }
     }
   }
 `;

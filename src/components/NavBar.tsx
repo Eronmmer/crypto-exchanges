@@ -16,13 +16,18 @@ const StyledNavContainer = styled.div`
   padding: .6rem;
   
   h1 {
+    padding: .3rem 1rem;
     margin: 0;
     text-align: center;
+    font-size: 1.5rem;
+
+    @media(min-width: 768px) {
+      font-size: 2em;
+    }
   }
 `;
 
 const Heading = styled(Link)`
-  text-decoration: none;
   color: initial;
 `
 

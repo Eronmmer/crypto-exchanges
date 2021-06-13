@@ -23,7 +23,11 @@ const StyledCard = styled.div<{ readonly padding?: boolean; }>`
           0 10px 0 -5px #eee,
           0 10px 1px -4px rgb(0 0 0 / 15%),
           0px 5px 0 -4px #eee;
-  padding: ${props => props.padding ? "1rem 2.5rem" : "1rem 0"};
+  padding: .7rem;
+
+  @media(min-width: 768px) {
+    padding: ${props => props.padding ? "1rem 2rem" : "1rem 0"};
+  }
 `
 
 export default Card;

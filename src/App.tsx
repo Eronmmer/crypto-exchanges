@@ -6,7 +6,7 @@ import Navbar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
         <Navbar />
         <Switch>

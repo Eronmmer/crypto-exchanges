@@ -10,10 +10,13 @@ const Container: React.FC<{ children?: ReactElement | ReactElement[] }> = ({ chi
 }
 
 const StyledContainer = styled.div`
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
+  padding: 0 1rem;
+
+  @media(min-width: 768px) {
+    padding: 0 2rem;
+  }
 `
 
 export default Container;
