@@ -1,7 +1,8 @@
 # Cryptocurrency Exchanges 🚀
 
 - Built with React(create react app & TypeScript) and styled components
-- Component testing with Cypress ⚡️
+- Testing implemented with Cypress
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -18,6 +19,7 @@ Runs cypress tests to completion headlessly.
 ### `npm test:open`
 
 Launches the cypress test runner.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
