@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ExchangePage from './pages/ExchangePage';
+import { HomePage } from './pages/HomePage/HomePage';
+import { ExchangePage } from './pages/ExchangePage/ExchangePage';
 import { Navbar } from './components/NavBar';
 
 function App() {
