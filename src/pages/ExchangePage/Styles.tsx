@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
 	display: flex;
-	gap: 0.5rem;
 	align-items: center;
+
+	& > * + * {
+		margin-left: 10px;
+	}
 
 	a {
 		text-decoration: none;

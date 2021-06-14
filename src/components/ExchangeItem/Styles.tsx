@@ -47,7 +47,6 @@ export const StyledItem = styled(Link)`
 
 export const StyledName = styled.div`
 	display: flex;
-	gap: 0.5rem;
 
 	img {
 		display: none;
@@ -57,6 +56,9 @@ export const StyledName = styled.div`
 		font-weight: 500;
 	}
 
+	& > * + * {
+		margin-left: 10px;
+	}
 	@media (min-width: 768px) {
 		font-size: 1.2rem;
 

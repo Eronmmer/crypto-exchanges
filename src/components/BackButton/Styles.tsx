@@ -5,10 +5,13 @@ export const StyledBackButton = styled.div`
 	margin: 2rem 0;
 	display: flex;
 	align-items: center;
-	gap: 0.5rem;
 	width: fit-content;
 	padding: 0.6rem 1.3rem;
 	border-radius: 10px;
+
+	& > * + * {
+		margin-left: 10px;
+	}
 
 	&:hover {
 		background: rgba(0, 0, 0, 0.04);
