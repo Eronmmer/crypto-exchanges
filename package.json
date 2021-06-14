@@ -21,7 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress open",
+    "test": "cypress run",
+    "test:open": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.ts?(x)'",
     "lint-fix": "eslint --fix --ext .ts,.tsx, ."

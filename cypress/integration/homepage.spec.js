@@ -1,8 +1,8 @@
-beforeEach(() => {
-	cy.visit('/');
-});
-
 describe("Renders expected texts on the homepage", () => {
+	beforeEach(() => {
+		cy.visit('/');
+	});
+
 	it("should render the navbar correctly", () => {
 		cy.get("a>h1").eq(0).contains("Crypto Exchanges 🚀");
 	});
