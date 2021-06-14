@@ -1,7 +1,7 @@
 # Cryptocurrency Exchanges 🚀
 
 - Built with React(create react app & TypeScript) and styled components
-- Testing with Cypress 
+- Component testing with Cypress ⚡️
 ## Available Scripts
 
 In the project directory, you can run:
