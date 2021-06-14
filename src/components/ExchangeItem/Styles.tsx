@@ -47,6 +47,7 @@ export const StyledItem = styled(Link)`
 
 export const StyledName = styled.div`
 	display: flex;
+	align-items: center;
 
 	img {
 		display: none;
