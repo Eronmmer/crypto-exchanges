@@ -1,4 +1,4 @@
-import { useEffect, useState, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import { StyledHead } from './Styles';
 import { ExchangeItem } from '../ExchangeItem';
 import { Container } from '../Container';
@@ -7,36 +7,19 @@ import { endpoint } from '../../utils';
 import { Card } from '../Card';
 import { Loader } from '../Loader';
 import { Pagination } from '../Pagination';
+import { useFetch } from '../../hooks/useFetch';
 
 export const ExchangeList = () => {
-	const [exchanges, setExchanges] = useState<Exchange[]>([]);
 	const [currPage, setCurrentPage] = useState<number>(1);
-	const [dataLoading, setDataLoading] = useState<boolean>(false);
-	const [error, setError] = useState<null | string>(null);
 
 	const pageCount = 10;
+	const { data, error, loading } = useFetch(`${endpoint}?page=${currPage}&per_page=10`);
 
-	useEffect(() => {
-		const fetchExchanges = async (page: number) => {
-			page = page <= 0 ? 1 : page;
-			setDataLoading(true);
-			try {
-				let response = await fetch(`${endpoint}?page=${page}&per_page=10`);
-				let data = await response.json();
-				setExchanges(data);
-			} catch {
-				setError('An error occurred. Please try again.');
-			} finally {
-				setDataLoading(false);
-			}
-		};
-		fetchExchanges(currPage);
-	}, [currPage]);
 	return (
 		<Container>
 			<Card>
 				<Fragment>
-					{dataLoading ? (
+					{loading ? (
 						<Loader />
 					) : error ? (
 						<p className="center">{error}</p>
@@ -48,7 +31,7 @@ export const ExchangeList = () => {
 								<p>Trust Score Rank</p>
 							</StyledHead>
 							<div>
-								{exchanges.map(
+								{data?.map(
 									({
 										country,
 										id,
@@ -58,7 +41,7 @@ export const ExchangeList = () => {
 										trust_score,
 										trust_score_rank,
 										image,
-									}) => (
+									}: Exchange) => (
 										<ExchangeItem
 											key={id}
 											id={id}
@@ -75,7 +58,7 @@ export const ExchangeList = () => {
 							</div>
 						</Fragment>
 					)}
-					{!dataLoading && !error && (
+					{!loading && !error && (
 						<Pagination currPage={currPage} pageCount={pageCount} setCurrentPage={setCurrentPage} />
 					)}
 				</Fragment>
