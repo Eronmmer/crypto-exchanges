@@ -25,7 +25,7 @@
     "test:open": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.ts?(x)'",
-    "lint-fix": "eslint --fix --ext .ts,.tsx, ."
+    "lint:fix": "eslint --fix --ext .ts,.tsx, ."
   },
   "eslintConfig": {
     "extends": [

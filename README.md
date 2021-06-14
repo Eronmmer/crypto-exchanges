@@ -2,6 +2,7 @@
 
 - Built with React(create react app & TypeScript) and styled components
 - Testing implemented with Cypress
+- Linting & formatting with ESLint and Prettier
 
 ## Available Scripts
 
@@ -16,9 +17,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Runs cypress tests to completion headlessly.
 
-### `npm test:open`
+### `npm run test:open`
 
 Launches the cypress test runner.
+
+### `npm run lint`
+
+Shows ESLint errors and warnings.
+
+### `npm run lint:fix`
+
+Fixes ESLint problems/formats the entire codebase.
 
 ### `npm run build`
 
